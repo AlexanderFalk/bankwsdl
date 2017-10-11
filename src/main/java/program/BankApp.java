@@ -17,17 +17,10 @@ public class BankApp {
 
         System.out.println(getWSDLBank(customerCreditScore, customerLoanAmount, customerLoanDuration));
     }*/
+    private BankWSDL bank = new BankWSDL();
 
-    @WebMethod
-    public static List<Object> getWSDLBank(int customerCreditScore, int customerLoanAmount, double loanDuration) {
-        BankWSDL bank = new BankWSDL();
-        List<Object> bankList = new ArrayList<>();
-        double interestRate = bank.calculateInterestRate(customerCreditScore, loanDuration);
-        bankList.add(bank.bankName());
-        bankList.add(interestRate);
-        bankList.add(bank.refund(interestRate, customerLoanAmount, loanDuration));
-
-        return bankList;
+    public List<Object> getWSDLBank(int customerCreditScore, int customerLoanAmount, double loanDuration) {
+        return bank.returnWSDLBank(customerCreditScore, customerLoanAmount, loanDuration);
     }
 
 }

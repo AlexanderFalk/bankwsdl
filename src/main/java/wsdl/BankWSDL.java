@@ -1,5 +1,8 @@
 package wsdl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BankWSDL implements BankInterface {
 
     private static final int DEFAULT_CREDIT_SCORE               = 300;
@@ -42,4 +45,13 @@ public class BankWSDL implements BankInterface {
         return Math.floor(loanAmount);
     }
 
+    public List<Object> returnWSDLBank(int customerCreditScore, int customerLoanAmount, double loanDuration) {
+        List<Object> bankList = new ArrayList<>();
+        double interestRate = calculateInterestRate(customerCreditScore, loanDuration);
+        bankList.add(bankName());
+        bankList.add(interestRate);
+        bankList.add(refund(interestRate, customerLoanAmount, loanDuration));
+
+        return bankList;
+    }
 }
