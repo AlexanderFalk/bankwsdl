@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BankWSDL:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="bankwsdl.war">
+      <element id="artifact" artifact-name="BankWSDL:war exploded" />
+    </root>
+  </artifact>
+</component>
