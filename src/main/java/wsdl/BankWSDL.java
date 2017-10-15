@@ -45,7 +45,7 @@ public class BankWSDL implements BankInterface {
         return Math.floor(loanAmount);
     }
 
-    public List<Object> returnWSDLBank(int customerCreditScore, int customerLoanAmount, double loanDuration) {
+    public List<Object> returnWSDLBank(int customerCreditScore, double customerLoanAmount, double loanDuration) {
         List<Object> bankList = new ArrayList<>();
         double interestRate = calculateInterestRate(customerCreditScore, loanDuration);
         bankList.add(bankName());

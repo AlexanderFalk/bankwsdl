@@ -11,7 +11,7 @@ public class BankApp {
 
     private BankWSDL bank = new BankWSDL();
 
-    public List<Object> getWSDLBank(int customerCreditScore, int customerLoanAmount, double loanDuration) {
+    public List<Object> getWSDLBank(int customerCreditScore, double customerLoanAmount, double loanDuration) {
         return bank.returnWSDLBank(customerCreditScore, customerLoanAmount, loanDuration);
     }
 
