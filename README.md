@@ -32,4 +32,6 @@ The interestrate is calculated as followed:
 * The bank has a default credit score value, example **300**  
 * It will take the difference between the default value and the customer credit score value  
 * A bank has an **incremental**,- and **decrementalvalue**, which indicates when the interestrate will fall or raise. 
-* The **incremental** value could as an example be **20**. This means that everytime the **Customer Credit Score** increments with 20 from the default value, it will decrease the interestrate with a percentage, also set by the bank. This could be **1%** or **5%**. The other way around, with the decremental value, it could be set to 10, which would mean that for every 10 credit points below the default score, it would increase the interestrate for the loan.  
+* A bank has an **increment,-** and **decrement-rate**, which indicates how much the interest rate will be correlated when the score differes from the default value.
+* The **incremental** value could as an example be **20**. This means that everytime the **Customer Credit Score** increments with 20 from the default value, it will decrease the interestrate with a percentage (decrement-rate). This could be **1%** or **5%**. The other way around, with the decremental value, it could be set to 10, which would mean that for every 10 credit points below the default score, it would increase the interestrate for the loan.  
+* The bank has a loan-duration-rate applied as well, which indicates a decrement of the loan interest rate for each year extra added to the loan.
